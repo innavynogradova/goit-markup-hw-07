@@ -1,0 +1,115 @@
+.header {
+  font-weight: 500;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid #ececec;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+}
+
+.header-logo {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 93px;
+}
+
+.header-studio-color {
+  color: var(--header-studio-color);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item + .nav-item {
+  margin-left: 50px;
+}
+
+.nav-link {
+  position: relative;
+  transition-property: color;
+  transition-duration: var(--timing);
+  transition-timing-function: var(--timing-function);
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--nav-text-color);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--accent-color);
+}
+
+.header-contact-list {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header-contact-item:not(:first-child) {
+  margin-left: 50px;
+}
+
+.header-contact-link {
+  transition-property: color;
+  transition-duration: var(--timing);
+  transition-timing-function: var(--timing-function);
+
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--header-contact-color);
+}
+
+.header-contact-link:hover,
+.header-contact-link:focus {
+  color: var(--accent-color);
+}
+
+.header-contact-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.current {
+  color: var(--accent-color);
+}
+
+.nav-link.current::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition-property: background-color;
+  transition-duration: var(--timing);
+  transition-timing-function: var(--timing-function);
+
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+
+  background-color: var(--accent-color);
+}

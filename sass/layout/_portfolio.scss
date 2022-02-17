@@ -1,0 +1,126 @@
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.portfolio-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.portfolio-btn {
+  transition-property: color, background-color, box-shadow;
+  transition-duration: var(--timing);
+  transition-timing-function: var(--timing-function);
+
+  min-width: 73px;
+  padding: 6px 22px;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(26 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  border-radius: 4px;
+  border: transparent;
+
+  color: var(--second-btn-color);
+  background-color: var(--first-background-color);
+}
+
+.portfolio-btn:hover,
+.portfolio-btn:focus {
+  color: var(--first-btn-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.portfolio-btn-list + .portfolio-btn-list {
+  margin-left: 8px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+
+.portfolio-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.portfolio-item-link {
+  transition-property: box-shadow;
+  transition-duration: var(--timing);
+  transition-timing-function: var(--timing-function);
+
+  display: block;
+}
+
+.portfolio-item-link:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-item-text {
+  padding: 20px 24px;
+
+  background: var(--white-color);
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  box-sizing: border-box;
+}
+
+.portfolio-title {
+  margin-bottom: 4px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(36 / 18);
+  letter-spacing: 0.06em;
+  color: var(--first-text-color);
+}
+
+.portfolio-type {
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  color: var(--second-text-color);
+}
+
+.portfolio-item-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-top-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition-property: transform;
+  transition-duration: var(--timing);
+  transition-timing-function: var(--timing-function);
+  transform: translateY(101%);
+
+  height: 100%;
+  padding: 63px 24px;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+
+  color: var(--white-color);
+  background-color: rgba(33, 150, 243, 0.9);
+}
+
+.portfolio-item-link:hover .portfolio-top-text {
+  transform: translateY(0);
+}

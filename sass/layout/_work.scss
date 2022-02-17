@@ -1,0 +1,50 @@
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+
+.work-item {
+  position: relative;
+
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.work-item-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: block;
+  width: 100%;
+  height: 70px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  font-weight: 700;
+  line-height: calc(16 / 14);
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--white-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.work-title,
+.team-title,
+.client-title {
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+}
+
+.work {
+  padding-top: 0;
+  padding-bottom: 94px;
+}
