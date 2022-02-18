@@ -1,13 +1,13 @@
-.benefit-list {
+.benefit__list {
   display: flex;
   justify-content: space-between;
 }
 
-.benefit-item {
+.benefit__item {
   width: 270px;
 }
 
-.benefit-item-title {
+.benefit__title {
   margin-bottom: 10px;
 
   font-weight: 700;
@@ -15,12 +15,12 @@
   text-transform: uppercase;
 }
 
-.benefit-item-text {
+.benefit__text {
   line-height: calc(24 / 14);
   color: var(--second-text-color);
 }
 
-.benefit-icon-container {
+.benefit__icon-container {
   height: 120px;
   margin-bottom: 30px;
 

@@ -5,61 +5,42 @@
   background: var(--second-background-color);
 }
 
-.footer-container {
+.footer__container {
   display: flex;
   align-items: baseline;
 }
 
-.footer-flex-element:first-child {
+.footer-element:first-child {
   margin-right: 70px;
 }
 
-.footer-flex-element:last-child {
+.footer-element:last-child {
   margin-left: auto;
 }
 
-.footer-logo {
-  display: block;
-  margin-bottom: 20px;
-}
-
-.footer-studio-color {
-  color: var(--footer-studio-color);
-}
-
-.footer-contacts {
+.footer-contact {
   font-style: normal;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
 }
 
-.footer-address-link,
-.footer-email-tel-link {
+.footer-contact__link {
   transition-property: color;
   transition-duration: var(--timing);
   transition-timing-function: var(--timing-function);
-}
-
-.footer-address-link {
-  color: var(--white-color);
-}
-
-.footer-email-tel-link {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-address-link:hover,
-.footer-address-link:focus,
-.footer-email-tel-link:hover,
-.footer-email-tel-link:focus {
+.footer-contact__link--address-color {
+  color: var(--white-color);
+}
+
+.footer-contact__link:hover,
+.footer-contact__link:focus {
   color: var(--accent-color);
 }
 
-.footer-address {
-  margin-bottom: 9px;
-}
-
-.footer-email-tel:not(:last-child) {
+.footer-contact__item:not(:last-child) {
   margin-bottom: 9px;
 }
 
@@ -73,20 +54,20 @@
   color: var(--white-color);
 }
 
-.footer-social-list {
+.footer-join__social-list {
   display: flex;
   flex-wrap: wrap;
   margin-left: -10px;
   margin-bottom: -10px;
 }
 
-.footer-social-item {
+.footer-join__social-item {
   flex-basis: calc(100% / 4 - 10px);
   margin-left: 10px;
   margin-bottom: 10px;
 }
 
-.footer-social-link {
+.footer-join__social-link {
   transition-property: color, background-color;
   transition-duration: var(--timing);
   transition-timing-function: var(--timing-function);
@@ -103,21 +84,21 @@
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer-social-link:hover,
-.footer-social-link:focus {
+.footer-join__social-link:hover,
+.footer-join__social-link:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
 }
 
-.footer-social-icon {
+.footer-join__social-icon {
   fill: currentColor;
 }
 
-.footer-signup-wrap {
+.footer-join__signup-wrap {
   display: flex;
 }
 
-.footer-email-input {
+.footer-join__input {
   margin: 0;
   padding: 15px 16px;
   margin-right: 12px;
@@ -128,15 +109,4 @@
 
   background-color: transparent;
   color: var(--second-text-color);
-}
-
-.footer-btn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 28px 10px 29px;
-}
-
-.footer-btn-icon {
-  fill: var(--first-btn-color);
 }

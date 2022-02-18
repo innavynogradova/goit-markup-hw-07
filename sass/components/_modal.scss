@@ -37,7 +37,7 @@
   background-color: var(--white-color);
 }
 
-.modal-close {
+.modal__close {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -54,7 +54,7 @@
   background-color: var(--white-color);
 }
 
-.modal-title {
+.modal__title {
   margin-bottom: 12px;
 
   font-weight: 700;
@@ -67,19 +67,19 @@
   margin-bottom: 10px;
 }
 
-.form-field-comment {
+.form-field__comment {
   margin-bottom: 20px;
 }
 
-.form-field-check {
+.form-field__check {
   margin-bottom: 30px;
 }
 
-.modal-input-wrap {
+.modal__input-wrap {
   position: relative;
 }
 
-.modal-input {
+.modal__input {
   transition-property: border;
   transition-duration: var(--timing);
   transition-timing-function: var(--timing-function);
@@ -96,17 +96,17 @@
   cursor: pointer;
 }
 
-.modal-input:hover,
-.modal-input:focus {
+.modal__input:hover,
+.modal__input:focus {
   border: 1px solid #2196f3;
 }
 
-.modal-input:focus + .modal-icon,
-.modal-input:hover + .modal-icon {
+.modal__input:focus + .modal__icon,
+.modal__input:hover + .modal__icon {
   fill: var(--accent-color);
 }
 
-.modal-label {
+.modal__label {
   display: block;
   margin: 0;
   padding: 0;
@@ -120,7 +120,7 @@
   color: var(--second-text-color);
 }
 
-.modal-icon {
+.modal__icon {
   position: absolute;
   left: 12px;
   top: 50%;
@@ -130,7 +130,7 @@
   transition-timing-function: var(--timing-function);
 }
 
-.modal-textarea {
+.modal__textarea {
   transition-property: border;
   transition-duration: var(--timing);
   transition-timing-function: var(--timing-function);
@@ -145,7 +145,7 @@
   outline: none;
 }
 
-.modal-textarea::placeholder {
+.modal__textarea::placeholder {
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.01em;
@@ -153,21 +153,21 @@
   color: rgba(117, 117, 117, 0.5);
 }
 
-.modal-textarea:hover,
-.modal-textarea:focus {
+.modal__textarea:hover,
+.modal__textarea:focus {
   border: 1px solid #2196f3;
 }
 
-.modal-check-icon {
+.modal__check-icon {
   fill: transparent;
 }
 
-.modal-check:checked + .modal-check-text > span {
+.modal__check:checked + .modal__check-text > span {
   background-color: var(--accent-color);
   border: none;
 }
 
-.modal-check-text {
+.modal__check-text {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -176,7 +176,7 @@
   color: var(--second-text-color);
 }
 
-.modal-check-text span {
+.modal__check-text span {
   width: 16px;
   height: 15px;
   border: 2px solid #000000;
@@ -187,15 +187,8 @@
   justify-content: center;
 }
 
-.modal-check-agreement {
+.modal__check-agreement {
   margin-left: 4px;
   text-decoration: underline;
   color: var(--accent-color);
-}
-
-.modal-btn {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
 }

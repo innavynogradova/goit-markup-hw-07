@@ -1,11 +1,15 @@
-.work-list {
+.work {
+  padding-top: 0;
+}
+
+.work__list {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-bottom: -30px;
 }
 
-.work-item {
+.work__item {
   position: relative;
 
   flex-basis: calc(100% / 3 - 30px);
@@ -13,7 +17,7 @@
   margin-bottom: 30px;
 }
 
-.work-item-text {
+.work__text {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -33,18 +37,13 @@
   background-color: rgba(47, 48, 58, 0.8);
 }
 
-.work-title,
-.team-title,
-.client-title {
+.work__title,
+.team__title,
+.client__title {
   margin-bottom: 50px;
 
   font-weight: 700;
   font-size: 36px;
   line-height: calc(42 / 36);
   text-align: center;
-}
-
-.work {
-  padding-top: 0;
-  padding-bottom: 94px;
 }

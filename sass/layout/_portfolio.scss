@@ -3,13 +3,13 @@
   padding-bottom: 94px;
 }
 
-.portfolio-buttons {
+.portfolio__button-list {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.portfolio-btn {
+.button__portfolio {
   transition-property: color, background-color, box-shadow;
   transition-duration: var(--timing);
   transition-timing-function: var(--timing-function);
@@ -31,8 +31,8 @@
   background-color: var(--first-background-color);
 }
 
-.portfolio-btn:hover,
-.portfolio-btn:focus {
+.button__portfolio:hover,
+.button__portfolio:focus {
   color: var(--first-btn-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -40,24 +40,24 @@
   border-radius: 4px;
 }
 
-.portfolio-btn-list + .portfolio-btn-list {
+.portfolio__btn-item + .portfolio__btn-item {
   margin-left: 8px;
 }
 
-.portfolio-list {
+.portfolio__list {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-bottom: -30px;
 }
 
-.portfolio-item {
+.portfolio__item {
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-bottom: 30px;
 }
 
-.portfolio-item-link {
+.portfolio__link {
   transition-property: box-shadow;
   transition-duration: var(--timing);
   transition-timing-function: var(--timing-function);
@@ -65,12 +65,12 @@
   display: block;
 }
 
-.portfolio-item-link:hover {
+.portfolio__link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-item-text {
+.portfolio__text {
   padding: 20px 24px;
 
   background: var(--white-color);
@@ -80,7 +80,7 @@
   box-sizing: border-box;
 }
 
-.portfolio-title {
+.portfolio__title {
   margin-bottom: 4px;
 
   font-weight: 700;
@@ -90,18 +90,18 @@
   color: var(--first-text-color);
 }
 
-.portfolio-type {
+.portfolio__type {
   font-size: 16px;
   line-height: calc(30 / 16);
   color: var(--second-text-color);
 }
 
-.portfolio-item-wrap {
+.portfolio__wrap {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio-top-text {
+.portfolio__top-text {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -121,6 +121,6 @@
   background-color: rgba(33, 150, 243, 0.9);
 }
 
-.portfolio-item-link:hover .portfolio-top-text {
+.portfolio__link:hover .portfolio__top-text {
   transform: translateY(0);
 }
