@@ -63,7 +63,7 @@
 }
 
 .footer-join__social-link {
-  transition-property: color $timing $timing-function, background-color $timing $timing-function;
+  transition: color $timing $timing-function, background-color $timing $timing-function;
 
   @include flexAlign(center);
   width: 44px;
