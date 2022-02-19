@@ -1,6 +1,9 @@
+.client__title {
+  @extend %title;
+}
+
 .client__list {
-  display: flex;
-  flex-wrap: wrap;
+  @include flexWrap;
   margin-left: -30px;
   margin-bottom: -30px;
 }
@@ -12,29 +15,25 @@
 }
 
 .client__link {
-  transition-property: color, border;
-  transition-duration: var(--timing);
-  transition-timing-function: var(--timing-function);
+  transition: color $timing $timing-function, border $timing $timing-function;
 
   width: 170px;
   height: 92px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexAlign(center);
 
-  border: 1px solid var(--main-icon-color);
+  border: 1px solid $main-icon-color;
   box-sizing: border-box;
   border-radius: 4px;
   cursor: pointer;
-  color: var(--main-icon-color);
-  background-color: var(--white-color);
-}
+  color: $main-icon-color;
+  background-color: $white-color;
 
-.client__link:hover,
-.client__link:focus {
-  color: var(--accent-color);
-  border: 1px solid var(--accent-color);
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    border: 1px solid $accent-color;
+  }
 }
 
 .client__icon {

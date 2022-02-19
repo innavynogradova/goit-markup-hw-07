@@ -4,49 +4,45 @@
 }
 
 .portfolio__button-list {
-  display: flex;
-  justify-content: center;
+  @include flexAlign(center);
   margin-bottom: 50px;
 }
 
 .button__portfolio {
-  transition-property: color, background-color, box-shadow;
-  transition-duration: var(--timing);
-  transition-timing-function: var(--timing-function);
+  transition: color $timing $timing-function, background-color $timing $timing-function,
+    box-shadow $timing $timing-function;
 
   min-width: 73px;
   padding: 6px 22px;
 
   font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: calc(26 / 16);
+  @include font(16px, 500, 26px, 0.03em);
   text-align: center;
-  letter-spacing: 0.03em;
   cursor: pointer;
   border-radius: 4px;
   border: transparent;
 
-  color: var(--second-btn-color);
-  background-color: var(--first-background-color);
+  color: $second-btn-color;
+  background-color: $first-background-color;
+
+  &:hover,
+  &:focus {
+    color: $first-btn-color;
+    background-color: $accent-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+  }
 }
 
-.button__portfolio:hover,
-.button__portfolio:focus {
-  color: var(--first-btn-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-}
-
-.portfolio__btn-item + .portfolio__btn-item {
-  margin-left: 8px;
+.portfolio__btn-item {
+  & + & {
+    margin-left: 8px;
+  }
 }
 
 .portfolio__list {
-  display: flex;
-  flex-wrap: wrap;
+  @include flexWrap;
   margin-left: -30px;
   margin-bottom: -30px;
 }
@@ -58,22 +54,20 @@
 }
 
 .portfolio__link {
-  transition-property: box-shadow;
-  transition-duration: var(--timing);
-  transition-timing-function: var(--timing-function);
+  transition: box-shadow $timing $timing-function;
 
   display: block;
-}
 
-.portfolio__link:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
 }
 
 .portfolio__text {
   padding: 20px 24px;
 
-  background: var(--white-color);
+  background: $white-color;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
@@ -83,17 +77,13 @@
 .portfolio__title {
   margin-bottom: 4px;
 
-  font-weight: 700;
-  font-size: 18px;
-  line-height: calc(36 / 18);
-  letter-spacing: 0.06em;
-  color: var(--first-text-color);
+  @include font(18px, 700, 36px, 0.06em);
+  color: $first-text-color;
 }
 
 .portfolio__type {
-  font-size: 16px;
-  line-height: calc(30 / 16);
-  color: var(--second-text-color);
+  @include font(16px, null, 30px, null);
+  color: $second-text-color;
 }
 
 .portfolio__wrap {
@@ -105,22 +95,17 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  transition-property: transform;
-  transition-duration: var(--timing);
-  transition-timing-function: var(--timing-function);
+  transition: transform $timing $timing-function;
   transform: translateY(101%);
 
   height: 100%;
   padding: 63px 24px;
 
-  font-weight: 400;
-  font-size: 18px;
-  line-height: calc(28 / 18);
-
-  color: var(--white-color);
+  @include font(18px, null, 28px, null);
+  color: $white-color;
   background-color: rgba(33, 150, 243, 0.9);
-}
 
-.portfolio__link:hover .portfolio__top-text {
-  transform: translateY(0);
+  .portfolio__link:hover & {
+    transform: translateY(0);
+  }
 }

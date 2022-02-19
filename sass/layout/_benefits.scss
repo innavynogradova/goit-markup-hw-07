@@ -1,6 +1,5 @@
 .benefit__list {
-  display: flex;
-  justify-content: space-between;
+  @include flexAlign(space-between);
 }
 
 .benefit__item {
@@ -9,24 +8,20 @@
 
 .benefit__title {
   margin-bottom: 10px;
-
-  font-weight: 700;
-  line-height: calc(16 / 14);
+  @include font(14px, 700, 16px, null);
   text-transform: uppercase;
 }
 
 .benefit__text {
-  line-height: calc(24 / 14);
-  color: var(--second-text-color);
+  @include font(14px, null, 24px, null);
+  color: $second-text-color;
 }
 
 .benefit__icon-container {
   height: 120px;
   margin-bottom: 30px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexAlign(center);
 
-  background-color: var(--first-background-color);
+  background-color: $first-background-color;
 }

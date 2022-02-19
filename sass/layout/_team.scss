@@ -1,10 +1,13 @@
 .team {
-  background-color: var(--first-background-color);
+  background-color: $first-background-color;
+}
+
+.team__title {
+  @extend %title;
 }
 
 .team__list {
-  display: flex;
-  flex-wrap: wrap;
+  @include flexWrap;
   margin-left: -30px;
   margin-bottom: -30px;
 }
@@ -30,50 +33,44 @@
 .team__name {
   margin-bottom: 10px;
 
-  font-weight: 500;
-  font-size: 16px;
-  line-height: calc(19 / 16);
+  @include font(16px, 500, 19px, null);
 }
 
 .team__profession {
   margin-bottom: 16px;
 
-  font-size: 16px;
-  line-height: calc(19 / 16);
-  color: var(--second-text-color);
+  @include font(16px, null, 19px, null);
+  color: $second-text-color;
 }
 
 .team__socials-list {
-  display: flex;
-  justify-content: center;
+  @include flexAlign(center);
 }
 
-.team__socials-item + .team__socials-item {
-  margin-left: 10px;
+.team__socials-item {
+  & + & {
+    margin-left: 10px;
+  }
 }
 
 .team__socials-link {
-  transition-property: color, background-color;
-  transition-duration: var(--timing);
-  transition-timing-function: var(--timing-function);
+  transition: color $timing $timing-function, background-color $timing $timing-function;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexAlign(center);
 
   width: 44px;
   height: 44px;
   border-radius: 50%;
   cursor: pointer;
 
-  color: var(--main-icon-color);
-  background-color: var(--white-color);
-}
+  color: $main-icon-color;
+  background-color: $white-color;
 
-.team__socials-link:hover,
-.team__socials-link:focus {
-  color: var(--white-color);
-  background-color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: $white-color;
+    background-color: $accent-color;
+  }
 }
 
 .team__socials-icon {
